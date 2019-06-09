@@ -11,3 +11,4 @@ RETURN_TO = 'https://www.pixiv.net/'
 PIXIV_ID = 'NDE1Mzg2MzZlYzM1@foxmail.com'
 PASSWORD = '41538636ec35'
 SAVE_PATH = 'E:/image'
+BAD_REQUEST_RETRIES = 3
