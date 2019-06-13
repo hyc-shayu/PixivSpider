@@ -7,14 +7,13 @@ import random
 import requests.adapters
 import threading
 
-_COOKIE_FILE = os.path.join(os.getcwd(), 'cookie.txt')
-_RANK_JSON_URL = 'https://www.pixiv.net/ranking.php?mode=daily&content=illust&p=%s&format=json'
+_RANK_JSON_URL = RANK_JSON_REQUEST
 requests.adapters.DEFAULT_RETRIES = 3
 
 
 class PixivSpider:
-    __pidUrl = 'https://www.pixiv.net/member_illust.php?mode=medium&illust_id='
-    __ajaxRequest = 'https://www.pixiv.net/ajax/illust/%s/pages'
+    __pidBaseUrl = PID_BASE_URL
+    __ajaxRequest = AJAX_BASE_REQUEST
 
     def __init__(self):
         self.loginUrl = LOGIN_URL
@@ -69,7 +68,7 @@ class PixivSpider:
     def getOriginalUrlDict(self, pidList):
         urlDict = {}
         for pid in pidList:
-            url = f'{self.__pidUrl}{pid}'
+            url = f'{self.__pidBaseUrl}{pid}'
             response = self.session.get(self.__ajaxRequest % pid, headers={'Referer': url})
             urlJSON = response.json()['body']
             originalUrlList = [url['urls']['original'] for url in urlJSON]

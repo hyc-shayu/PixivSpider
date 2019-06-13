@@ -1,6 +1,9 @@
 BASE_URL = 'https://accounts.pixiv.net/login?lang=zh&source=pc&view_type=page&ref=wwwtop_accounts_index'
 LOGIN_URL = 'https://accounts.pixiv.net/api/login?lang=zh'
 FIRST_PAGE = 'https://www.pixiv.net/ranking.php?mode=daily&content=illust'
+PID_BASE_URL = 'https://www.pixiv.net/member_illust.php?mode=medium&illust_id='
+AJAX_BASE_REQUEST = 'https://www.pixiv.net/ajax/illust/%s/pages'
+RANK_JSON_REQUEST = 'https://www.pixiv.net/ranking.php?mode=daily&content=illust&p=%s&format=json'
 HEADERS = {
             # 'Host': "accounts.pixiv.net",
             'User-Agent': "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36",
