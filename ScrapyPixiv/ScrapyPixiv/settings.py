@@ -14,6 +14,7 @@ BOT_NAME = 'ScrapyPixiv'
 SPIDER_MODULES = ['ScrapyPixiv.spiders']
 NEWSPIDER_MODULE = 'ScrapyPixiv.spiders'
 
+IMAGES_STORE = 'E:/images/test'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'ScrapyPixiv (+http://www.yourdomain.com)'
@@ -67,7 +68,7 @@ DEFAULT_REQUEST_HEADERS = {
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
    'ScrapyPixiv.pipelines.ScrapypixivPipeline': 300,
-    # 'ScrapyPixiv.pipelines.DownloadImgPipeline': 1,
+    # 'ScrapyPixiv.pipelines.DownloadImgPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

@@ -5,11 +5,17 @@
 # See documentation in:
 # https://doc.scrapy.org/en/latest/topics/items.html
 
-import scrapy
+from scrapy import Field, Item
 
 
-class ScrapypixivItem(scrapy.Item):
+class ScrapypixivItem(Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    imagePath = scrapy.Field()
-    imageContent = scrapy.Field()
+    imagePath = Field()
+    imageContent = Field()
+
+
+class ImageItem(Item):
+    image_urls = Field()
+    referer = Field()
+    images = Field()
