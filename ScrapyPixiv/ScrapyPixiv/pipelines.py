@@ -44,6 +44,7 @@ class DownloadImgPipeline(ImagesPipeline):
         if not hasattr(self, 'cookies'):
             self.cookies = info.spider.cookies
         for url in item['image_urls']:
+            print(f'request for {url}')
             yield Request(url, headers={'Referer': item['referer']}, cookies=self.cookies)
 
     def file_path(self, request, response=None, info=None):
