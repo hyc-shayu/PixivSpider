@@ -4,6 +4,6 @@
 # RequestsPixivSpider
 使用requests库、多线程、正则表达式 爬取每日排行榜插画  
 # ScrapyPixiv  
-使用scrapy爬取个人推荐插画，可以从debug.py启动，配置账号密码和存储位置在spiders文件下的mySetting.py，如果使用ImagePipeline需自行修改settings配置文件（从debug.py启动也需修改该debug.py文件，使用ImagePipeline感觉速度比较慢）  
+使用scrapy爬取个人推荐插画，可以从debug.py启动，配置账号密码和存储位置在spiders文件下的mySetting.py，如果使用ImagePipeline需自行修改settings配置文件（从debug.py启动也需修改该debug.py文件）  
 <div align=center><img src="https://github.com/hyc-shayu/PixivSpider/blob/master/.image/requests.png" /></div>  
 
